@@ -37,7 +37,7 @@ spon_page = -1  #adjustable. if reset, spon_page =  -1
 occ_row = 0   #adjustable. if reset, occ_row =  0
 
 #implement adblocker
-path = 'C:/Users/steve/Downloads/extension_5_8_1_0.crx'
+path = 'C:/YOUR_PATH_HERE/extension_5_8_1_0.crx'
 
 #list of pages in the website. index 0 - 2 are the occupation page and index 3 - 5 are the sponsor page 
 page_to_click = ['26 - 50', '51 - 75', '76-100', '51 - 100', '101 - 150', '151 - 200']
@@ -233,7 +233,7 @@ with open('h1b-occupation.csv', newline='') as csv_file:
 
 #to save the extracted data to csv file
 #csv automatically add extra row for every data read. need to add newline='' to remove it
-with open('h1b-occupation-employer-test.csv', 'a', encoding="utf-8", newline='') as csv_file:
+with open('h1b-occupation-employer.csv', 'a', encoding="utf-8", newline='') as csv_file:
     writer = csv.writer(csv_file,delimiter=',')
     writer.writerow(["RANK", "SPONSOR", "NUMBER OF LCA", "AVERAGE SALARY","OCCUPATION"])
     time.sleep(12) #took about 12 seconds to implement the adblocker

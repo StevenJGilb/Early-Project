@@ -35,8 +35,8 @@ The extracted output can be utilized for in-depth data analysis and visualizatio
 ### Executing program
 
 How to run the program:
-* [Line 33] Replace the 'path' variable in the code with the path to the crx file (the format should look like this: 'C:/Users/username/Downloads/extension_5_8_1_0.crx').
-* [Line 224] Rename the file if necessary (optional).
+* [Line 40] Replace the 'path' variable in the code with the path to the crx file (the format should look like this: 'C:/Users/username/Downloads/extension_5_8_1_0.crx').
+* [Line 236] Rename the file if necessary (optional).
 * Run the program.
 
 ## Help
@@ -44,16 +44,22 @@ How to run the program:
 **FAQ:**
 
 Q: Chromedriver is only compatible with version 14, but I have Chromedriver version 16.
+
 A: Update your Selenium to version 4.11.2 (pip install -U selenium==4.11.2).
 
 Q: The pop-up ads from the URL are not allowing me to extract data.
-A: Make sure the crx file works. You'll know if the crx file works if the adblocker installation page shows up. It might take some time to finish downloading the adblocker. If you need more time, go to line 227 and increase the number (currently set to 12).
+
+A: Make sure the crx file works. You'll know if the crx file works if the adblocker installation page shows up. It might take some time to finish downloading the adblocker. If you need more time, go to line 239 and increase the number (currently set to 12).
 
 Q: The code is running, but it suddenly stops extracting.
 A: Ensure that the device is set to high performance and plugged in, as the code will run for approximately 1 hour, depending on your device.
 
 Q: The program is stuck, and I want to continue extracting data from where it stopped.
-A: 1. Check the CSV file where it stops. For example, if it stops at occupation 'Material Scientists' (row 82 or index 80), you can delete the data up to the last completed data extraction. 2. Change the 'occ_row' variable based on the index number (referring to the occupation CSV file). 3. Change the 'occ_page' variable based on the page the occupation is on (e.g., occupation = 'Material Scientist' at row 82 corresponds to pages 51 - 100 or occ_page = 3). 4. Go to line 231, highlight the code, and CTRL + / to avoid extra header. Refer to line 36 for more details on the page indexing.
+A: 
+1. Check the CSV file where it stops. For example, if it stops at occupation 'Material Scientists' (row 82 or index 80), you can delete the data up to the last completed data extraction. 
+2. Change the 'occ_row' variable based on the index number (referring to the occupation CSV file). 
+3. Change the 'occ_page' variable based on the page the occupation is on (e.g., occupation = 'Material Scientist' at row 82 corresponds to pages 51 - 100 or occ_page = 3). Refer to line 43 for more details on the page indexing.
+4. Go to line 238, highlight the code, and CTRL + / to avoid extra header. 
 
 If you encounter any other errors, please contact me (contact details below).
 
@@ -62,7 +68,9 @@ If you encounter any other errors, please contact me (contact details below).
 Contributor's name and contact information:
 
 Name: Steven Gilbert
+
 Email: stevenjgilb@gmail.com
+
 Linkedin: www.linkedin.com/in/stevenjgilb
 
 ## Version History
